@@ -73,23 +73,36 @@ export default function Home() {
       </a>
       <h1 className="text-white text-4xl mb-4">L2 - Share Loot</h1>
       <div className="flex justify-center items-center flex-col h-100 m-auto">
-        <div className="flex gap-4 items-center m-auto justify-center">
-          <textarea
-            placeholder="Enter items (one per line)"
-            onChange={handleItemChange}
-            rows={20}
-            className=" bg-slate-50 text-slate-900 input input-bordered w-full max-w-xs h-fit"
-          />
-          <textarea
-            placeholder="Enter names (one per line)"
-            onChange={handleNameChange}
-            rows={20}
-            className=" bg-slate-50 text-slate-900 input input-bordered w-full max-w-xs h-fit"
-          />
+        <div className="flex gap-4 items-start m-auto justify-center">
+          <div className="w-[50%]">
+            <textarea
+              placeholder="Enter items (one per line)"
+              onChange={handleItemChange}
+              rows={20}
+              className=" bg-slate-50 text-slate-900 input input-bordered w-full max-w-xs h-fit"
+            />
+            {items.length > 0 && (
+              <span className="">Items - {items.length}</span>
+            )}
+          </div>
+          <div className="w-[50%]">
+            <textarea
+              placeholder="Enter names (one per line)"
+              onChange={handleNameChange}
+              rows={20}
+              className=" bg-slate-50 text-slate-900 input input-bordered w-full max-w-xs h-fit"
+            />
+            {names.length > 0 && (
+              <span className="text-white font-medium">
+                Players - {names.length}
+              </span>
+            )}
+          </div>
         </div>
         <button
           onClick={handleMatch}
           className="btn-primary btn block m-auto mt-4"
+          disabled={items.length < 1 || names.length < 1 ? true : false}
         >
           Share Loot
         </button>
