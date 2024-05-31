@@ -63,15 +63,16 @@ export default function Home() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Image
+        {/* <Image
           src="https://mithrilmines.eu/images/logo.png"
           width="200"
           height="200"
           alt="mithrilMines Logo"
           className="m-auto mb-8"
-        />
+        /> */}
+        <div id="logo"></div>
       </a>
-      <h1 className="text-white text-4xl mb-4">L2 - Share Loot</h1>
+      <h1 className="text-white text-4xl mb-4 mt-6">L2 - Share Loot</h1>
       <div className="flex justify-center items-center flex-col h-100 m-auto">
         <div className="flex gap-4 items-start m-auto justify-center">
           <div className="w-[50%]">
@@ -82,7 +83,9 @@ export default function Home() {
               className=" bg-slate-50 text-slate-900 input input-bordered w-full max-w-xs h-fit"
             />
             {items.length > 0 && (
-              <span className="">Items - {items.length}</span>
+              <span className="text-white font-medium">
+                Items - {items.length}
+              </span>
             )}
           </div>
           <div className="w-[50%]">

@@ -12,6 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <link
+        rel="stylesheet"
+        href="https://mithrilmines.eu/css/animate.css?version=1"
+      ></link>
       <body className={"bg-slate-800 h-[100vh] " + inter.className}>
         {children}
         <Footer />
