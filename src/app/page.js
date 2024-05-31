@@ -57,36 +57,53 @@ export default function Home() {
   };
 
   return (
-    <div className=" bg-slate-800 h-[100vh] text-center p-10">
+    <div className=" bg-slate-800 text-center p-10 pb-20">
+      <a
+        href="https://mithrilmines.eu/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src="https://mithrilmines.eu/images/logo.png"
+          width="200"
+          height="200"
+          alt="mithrilMines Logo"
+          className="m-auto mb-8"
+        />
+      </a>
+      <h1 className="text-white text-4xl mb-4">L2 - Share Loot</h1>
       <div className="flex justify-center items-center flex-col h-100 m-auto">
         <div className="flex gap-4 items-center m-auto justify-center">
           <textarea
             placeholder="Enter items (one per line)"
             onChange={handleItemChange}
             rows={20}
-            className=" bg-slate-50 text-slate-900 input input-bordered w-full max-w-xs h-[200px]"
+            className=" bg-slate-50 text-slate-900 input input-bordered w-full max-w-xs h-fit"
           />
           <textarea
             placeholder="Enter names (one per line)"
             onChange={handleNameChange}
             rows={20}
-            className=" bg-slate-50 text-slate-900 input input-bordered w-full max-w-xs h-[200px]"
+            className=" bg-slate-50 text-slate-900 input input-bordered w-full max-w-xs h-fit"
           />
         </div>
         <button
           onClick={handleMatch}
           className="btn-primary btn block m-auto mt-4"
         >
-          Match
+          Share Loot
         </button>
         {displayResults && (
           <div>
             <h2 className="mt-4 text-lg font-bold">Congratulations:</h2>
             {Object.keys(tempResults).map((name) => (
-              <div key={name} className=" text-white">
-                <strong className=" text-green-400">{name}</strong> παίρνει το
+              <div
+                key={name}
+                className="text-white bg-slate-900 m-1.5 p-1 rounded border-l-4 border-yellow-400"
+              >
+                <strong className=" text-blue-400">{name}</strong> παίρνει το
                 αντικείμενο:{" "}
-                <strong className=" text-green-400">
+                <strong className=" text-blue-400">
                   {tempResults[name].join(" |  ")}
                 </strong>
               </div>
