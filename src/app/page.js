@@ -191,7 +191,7 @@ export default function Home() {
               className="btn_copyToClipboard fixed right-2 bottom-20 btn rounded-full p-3 flex justify-center items-center h-fit drop-shadow-xl"
               onClick={copyToClipboard}
             >
-              <img width="32" height="32" src="/copy.png" alt="copy-2" />
+              <img width="32" height="32" src="./copy.png" alt="copy-2" />
             </button>
           </div>
         )}
