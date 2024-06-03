@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://mithrilmines.eu/css/animate.css?version=1");
+
 :root {
   --animate-duration: 1s;
   --animate-delay: 1s;
